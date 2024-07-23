@@ -1,0 +1,26 @@
+@use '../abstract/' as *;
+@layer components {
+  .primary-navigation {
+    @include grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--size-8);
+    &__list {
+      @include flex;
+      gap: var(--size-9);
+      align-items: center;
+      justify-content: center;
+    }
+    &__link {
+      font-weight: var(--font-weight-600);
+      font-size: var(--font-size-300);
+      letter-spacing: var(--font-letterspacing-2);
+      line-height: var(--font-lineheight-3);
+      color: oklch(var(--text-4-color));
+    }
+    &__tools {
+      @include flex;
+      align-items: center;
+      gap: 2.875rem;
+    }
+  }
+}

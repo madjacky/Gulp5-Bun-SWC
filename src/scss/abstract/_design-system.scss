@@ -1,0 +1,54 @@
+@layer design-system {
+  :where(:root) {
+    /*  CONTAINERS
+    ================================ */
+    --container-content-width: 76.875rem;
+    --container-inline-offset: var(--size-5);
+    --container-inline-size: calc(var(--container-content-width) + (var(--container-inline-offset) * 2));
+    /*  WRAPPERS
+    ================================ */
+    --wrapper-content-inline-size: 76.875rem;
+    --wrapper-inline-offset: var(--size-9);
+    --wrapper-inline-size: min(var(--wrapper-content-inline-size), 100% - var(--wrapper-inline-offset));
+    /*  ASPECT RATIOS
+    ================================ */
+    --aspect-ratio-square: 1;
+    --aspect-ratio-landscape: 4/3;
+    --aspect-ratio-portrait: 3/4;
+    --aspect-ratio-widescreen: 16/9;
+    --aspect-ratio-ultrawide: 18/5;
+    /*  BORDER-SIZES
+    ================================ */
+    --border-size-1: 1px;
+    --border-size-2: 2px;
+    --border-size-3: 5px;
+    --border-size-4: 10px;
+    --border-size-5: 25px;
+    /*  BORDER-RADIUSES
+    ================================ */
+    --border-radius-1: 2px;
+    --border-radius-2: 4px;
+    --border-radius-3: 1rem;
+    --border-radius-4: 2rem;
+    --border-radius-5: 4rem;
+    --border-radius-6: 8rem;
+    --border-radius-round: 1e5px;
+    --border-radius-relative: 100vw;
+    --border-conditional-radius-1: clamp(0px, calc(100vw - 100%) * 1e5, var(--border-radius-1));
+    --border-conditional-radius-2: clamp(0px, calc(100vw - 100%) * 1e5, var(--border-radius-2));
+    --border-conditional-radius-3: clamp(0px, calc(100vw - 100%) * 1e5, var(--border-radius-3));
+    --border-conditional-radius-4: clamp(0px, calc(100vw - 100%) * 1e5, var(--border-radius-4));
+    --border-conditional-radius-5: clamp(0px, calc(100vw - 100%) * 1e5, var(--border-radius-5));
+    --border-conditional-radius-6: clamp(0px, calc(100vw - 100%) * 1e5, var(--border-radius-6));
+    /*  Z - INDEXES
+    ================================ */
+    --z-index-1: 1;
+    --z-index-2: 2;
+    --z-index-3: 3;
+    --z-index-4: 4;
+    --z-index-5: 5;
+    --z-index-6: 2147483647;
+    --negative-z-index-1: -1;
+    --negative-z-index-2: -5;
+  }
+}

@@ -1,0 +1,51 @@
+@use 'display' as *;
+@mixin checkbox {
+  @include grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  accent-color: oklch(var(--link-color));
+  &__input:is(:checked) + &__label::before {
+    background-color: oklch(var(--link-color));
+  }
+  &__input:is(:checked) + &__label::after {
+    opacity: 1;
+  }
+  &__label {
+    @include in-block;
+    position: relative;
+    padding-inline-start: 3ex;
+    font-size: var(--font-size-300);
+    color: oklch(var(--text-2-color));
+    &::before {
+      content: '';
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 0;
+      block-size: var(--size-5);
+      inline-size: var(--size-5);
+      border: var(--border-size-1) solid oklch(var(--link-color));
+      border-radius: var(--border-radius-1);
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 0;
+      block-size: var(--size-5);
+      inline-size: var(--size-5);
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.73649 0.96967C10.0255 0.676777 10.4942 0.676777 10.7832 0.96967C11.0687 1.25897 11.0722 1.72582 10.7937 2.01947L4.88025 9.00973C4.87456 9.01693 4.86848 9.02381 4.86205 9.03033C4.573 9.32322 4.10437 9.32322 3.81532 9.03033L0.216784 5.38388C-0.0722613 5.09099 -0.0722613 4.61612 0.216784 4.32322C0.505829 4.03033 0.974464 4.03033 1.26351 4.32322L4.31638 7.41674L9.71686 0.992105C9.72295 0.984235 9.72951 0.976743 9.73649 0.96967Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: var(--size-4) var(--size-4);
+      opacity: 0;
+      transform: translateY(-50%);
+      [data-theme="dark"] & {
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.73649 0.96967C10.0255 0.676777 10.4942 0.676777 10.7832 0.96967C11.0687 1.25897 11.0722 1.72582 10.7937 2.01947L4.88025 9.00973C4.87456 9.01693 4.86848 9.02381 4.86205 9.03033C4.573 9.32322 4.10437 9.32322 3.81532 9.03033L0.216784 5.38388C-0.0722613 5.09099 -0.0722613 4.61612 0.216784 4.32322C0.505829 4.03033 0.974464 4.03033 1.26351 4.32322L4.31638 7.41674L9.71686 0.992105C9.72295 0.984235 9.72951 0.976743 9.73649 0.96967Z' fill='black'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}

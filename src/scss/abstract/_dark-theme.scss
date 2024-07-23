@@ -1,0 +1,23 @@
+@layer themes.dark {
+  @media (prefers-color-scheme: dark) {
+    :where(:root) {
+      color-scheme: dark;
+      --surface-1-color: var(--dark-surface-1-color);
+      --surface-2-color: var(--dark-surface-2-color);
+      --surface-3-color: var(--dark-surface-3-color);
+      --surface-4-color: var(--dark-surface-4-color);
+      --surface-5-color: var(--dark-surface-5-color);
+      --surface-6-color: var(--dark-surface-6-color);
+      --surface-7-color: var(--dark-surface-7-color);
+      --surface-8-color: var(--dark-surface-8-color);
+      --text-1-color: var(--dark-text-1-color);
+      --text-2-color: var(--dark-text-2-color);
+      --text-3-color: var(--dark-text-3-color);
+      --text-4-color: var(--dark-text-4-color);
+      --link-color: var(--dark-link-color);
+      --link-visited-color: var(--dark-link-visited-color);
+      --surface-shadow-color: 15.16% 0.039 250.31;
+      --surface-shadow-strength: .25;
+    }
+  }
+}

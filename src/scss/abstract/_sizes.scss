@@ -1,0 +1,64 @@
+@layer design-system.sizes {
+  :where(:root) {
+    /*  CONTENT SIZES
+    ================================ */
+    --size-content-1: 20ch;
+    --size-content-2: 45ch;
+    --size-content-3: 60ch;
+    --size-content-4: 65ch;
+
+    /*  FLUID SIZES
+    ============================================== */
+    --size-fluid-1: clamp(0.5rem, 1vw, 1rem);
+    --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
+    --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+    --size-fluid-4: clamp(2rem, 4vw, 3rem);
+    --size-fluid-5: clamp(4rem, 5vw, 5rem);
+    --size-fluid-6: clamp(5rem, 7vw, 7.5rem);
+    --size-fluid-7: clamp(7.5rem, 10vw, 10rem);
+    --size-fluid-8: clamp(10rem, 20vw, 15rem);
+    --size-fluid-9: clamp(15rem, 30vw, 20rem);
+    --size-fluid-10: clamp(20rem, 40vw, 30rem);
+
+    /*  RELATIVE SIZES
+    ============================================== */
+    --size-relative-000: -0.5ch;
+    --size-relative-00: -0.25ch;
+    --size-relative-1: 0.25ch;
+    --size-relative-2: 0.5ch;
+    --size-relative-3: 1ch;
+    --size-relative-4: 1.25ch;
+    --size-relative-5: 1.5ch;
+    --size-relative-6: 1.75ch;
+    --size-relative-7: 2ch;
+    --size-relative-8: 3ch;
+    --size-relative-9: 4ch;
+    --size-relative-10: 5ch;
+    --size-relative-11: 7.5ch;
+    --size-relative-12: 10ch;
+    --size-relative-13: 15ch;
+    --size-relative-14: 20ch;
+    --size-relative-15: 30ch;
+
+    /*  SIZES
+    ============================================== */
+    --size-1: -0.5rem;
+    --size-2: -0.25rem;
+    --size-3: 0.25rem;
+    --size-4: 0.5rem;
+    --size-5: 1rem;
+    --size-6: 1.25rem;
+    --size-7: 1.5rem;
+    --size-8: 1.75rem;
+    --size-9: 2rem;
+    --size-10: 3rem;
+    --size-11: 4rem;
+    --size-12: 5rem;
+    --size-13: 7.5rem;
+    --size-14: 10rem;
+    --size-15: 15rem;
+    --size-16: 20rem;
+    --size-17: 30rem;
+    --size-18: 76.875rem;
+  }
+}

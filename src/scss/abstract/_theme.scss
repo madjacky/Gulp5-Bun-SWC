@@ -1,0 +1,80 @@
+@layer themes {
+  :where(:root) {
+    /* ================ LIGHT THEME ================ */
+    --light-surface-1-color: var(--white-color);
+    --light-surface-2-color: var(--gray-0-oklch);
+    --light-surface-3-color: var(--gray-1-oklch);
+    --light-surface-4-color: var(--gray-2-oklch);
+    --light-surface-5-color: var(--gray-3-oklch);
+    --light-surface-6-color: var(--gray-4-oklch);
+    --light-text-1-color: var(--gray-12-oklch);
+    --light-text-2-color: var(--gray-8-oklch);
+    --light-text-3-color: var(--gray-7-oklch);
+    --light-link-color: var(--indigo-7-oklch);
+    --light-link-visited-color: var(--purple-7-oklch);
+    /* ================ DARK THEME ================ */
+    --dark-surface-1-color: var(--black-color);
+    --dark-surface-2-color: var(--gray-12-oklch);
+    --dark-surface-3-color: var(--gray-11-oklch);
+    --dark-surface-4-color: var(--gray-10-oklch);
+    --dark-surface-5-color: var(--gray-9-oklch);
+    --dark-surface-6-color: var(--gray-8-oklch);
+    --dark-surface-7-color: var(--gray-7-oklch);
+    --dark-surface-8-color: var(--gray-6-oklch);
+    --dark-text-1-color: var(--gray-1-oklch);
+    --dark-text-2-color: var(--gray-3-oklch);
+    --dark-text-3-color: var(--gray-4-oklch);
+    --dark-text-4-color: var(--gray-5-oklch);
+    --dark-link-color: var(--indigo-3-oklch);
+    --dark-link-visited-color: var(--purple-3-oklch);
+    /* ================ GRAPE THEME ================ */
+    --grape-surface-1-color: var(--purple-0-oklch);
+    --grape-surface-2-color: var(--purple-1-oklch);
+    --grape-surface-3-color: var(--purple-2-oklch);
+    --grape-surface-4-color: var(--purple-3-oklch);
+    --grape-text-1-color: var(--purple-9-oklch);
+    --grape-text-2-color: var(--purple-7-oklch);
+    --grape-link-color: var(--purple-5-oklch);
+    --grape-link-visited-color: var(--indigo-5-oklch);
+    /* ================ CHOCO THEME ================ */
+    --choco-surface-1-color: var(--choco-12-oklch);
+    --choco-surface-2-color: var(--choco-11-oklch);
+    --choco-surface-3-color: var(--choco-10-oklch);
+    --choco-surface-4-color: var(--choco-9-oklch);
+    --choco-text-1-color: var(--choco-1-oklch);
+    --choco-text-2-color: var(--choco-2-oklch);
+    --choco-link-color: var(--choco-5-oklch);
+    /* ================ DIM THEME ================ */
+    --dim-surface-1-color: var(--gray-8-oklch);
+    --dim-surface-2-color: var(--gray-7-oklch);
+    --dim-surface-3-color: var(--gray-6-oklch);
+    --dim-surface-4-color: var(--gray-5-oklch);
+    --dim-text-1-color: var(--gray-3-oklch);
+    --dim-text-2-color: var(--gray-4-oklch);
+    --dim-link-color: var(--orange-4-oklch);
+    /* ================ MATE THEME ================ */
+    --mate-surface-1-color: 32.35% 0.011 225.42;
+    --mate-surface-2-color: 37.24% 0.014 226.34;
+    --mate-surface-3-color: 42.01% 0.007 223.58;
+    --mate-surface-4-color: 46.69% 0.009 229.01;
+    --mate-text-1-color: 80.69% 0.017 233.08;
+    --mate-text-2-color: 69.41% 0.017 227.08;
+    --mate-link-color: 57.44% 0.122 238.11;
+    /* ================ OBSIDIAN THEME ================ */
+    --obsidian-surface-1-color: 21.54% 0.006 236.85;
+    --obsidian-surface-2-color: 27.17% 0.009 219.82;
+    --obsidian-surface-3-color: 32.19% 0.007 229.03;
+    --obsidian-surface-4-color: 37.23% 0.006 228.98;
+    --obsidian-text-1-color: 88.62% 0.01 222.07;
+    --obsidian-text-2-color: 72.45% 0.008 228.9;
+    --obsidian-link-color: 47.53% 0.075 234.04;
+    /* ================ SORTA SAGE THEME ================ */
+    --sage-surface-1-color: 92.53% 0.011 225.99;
+    --sage-surface-2-color: 99.33% 0.001 197.14;
+    --sage-surface-3-color: 94.01% 0.007 233.64;
+    --sage-surface-4-color: 88.53% 0.013 228.94;
+    --sage-text-1-color: 23.78% 0.05 235;
+    --sage-text-2-color: 42.86% 0.043 230.77;
+    --sage-link-color: 70.72% 0.1679488624357663 242.04198289887938;
+  }
+}

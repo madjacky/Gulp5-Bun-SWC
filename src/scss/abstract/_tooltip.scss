@@ -1,0 +1,152 @@
+@use 'colors';
+@use 'design-system';
+@use 'sizes';
+@use 'typography';
+@use 'media-queries' as *;
+@use 'light-theme';
+@use 'light-theme-switch';
+@use 'dark-theme';
+@use 'dark-theme-switch';
+
+@mixin tool-tip {
+  --isRTL: -1;
+  --_p-block: 1.5ex;
+  --_p-inline: 2ex;
+  --_triangle-size: 7px;
+  --_bg: var(--surface-1-color);
+  --_shadow-color: var(--surface-shadow-color);
+  --_shadow-alpha: .15;
+  --_top-tip: conic-gradient(from 150deg at top, oklch(var(--_shadow-color) / 0), oklch(var(--_shadow-color)) 1deg 60deg, oklch(var(--_shadow-color) / 0) 61deg) top / 100% 50% no-repeat;
+  --_right-tip: conic-gradient(from -120deg at right, oklch(var(--_shadow-color) / 0), oklch(var(--_shadow-color)) 1deg 60deg, oklch(var(--_shadow-color) / 0) 61deg) right / 50% 100% no-repeat;
+  --_left-tip: conic-gradient(from 60deg at left, oklch(var(--_shadow-color) / 0), oklch(var(--_shadow-color)) 1deg 60deg, oklch(var(--_shadow-color) / 0) 61deg) left / 50% 100% no-repeat;
+  --_bottom-tip: conic-gradient(from -30deg at bottom, oklch(var(--_shadow-color) / 0), oklch(var(--_shadow-color)) 1deg 60deg, oklch(var(--_shadow-color) / 0) 61deg) bottom / 100% 50% no-repeat;
+  position: absolute;
+  margin: 0;
+  inline-size: max-content;
+  max-block-size: 25ch;
+  padding-block: var(--_p-block);
+  padding-inline: var(--_p-inline);
+  z-index: var(--z-index-1);
+  background-color: oklch(var(--_bg));
+  border-radius: var(--border-radius-2);
+  color: CanvasText;
+  text-align: start;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-300);
+  line-height: initial;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  will-change: filter;
+  filter:
+    drop-shadow(0 3px 3px oklch(var(--_shadow-color) / var(--_shadow-alpha)))
+    drop-shadow(0 12px 12px oklch(var(--_shadow-color) / var(--_shadow-alpha)));
+  transform: translateX(var(--_x, 0)) translateY(var(--_y, 0));
+  transition: opacity .2s ease, transform .2s ease;
+  [data-theme="dark"] & {
+    --_bg: var(--surface-4-color);
+    --_shadow-alpha: .5;
+  }
+  &:dir(rtl) {
+    --isRTL: 1;
+  }
+  &::before {
+    content: "; Has tooltip: ";
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    block-size: 1px;
+    inline-size: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: oklch(var(--_bg));
+    mask: var(--_tip);
+  }
+  /* top tooltip styles */
+  &:is(
+    [tip-position="top"],
+    [tip-position="block-start"],
+    :not([tip-position]),
+    [tip-position="bottom"],
+    [tip-position="block-end"]
+  ) {
+    text-align: center;
+  }
+  /* TOP || BLOCK START */
+  &:is([tip-position="top"], [tip-position="block-start"], :not([tip-position])) {
+    inset-inline-start: 50%;
+    inset-block-end: calc(100% + var(--_p-block) + var(--_triangle-size));
+    --_x: calc(50% * var(--isRTL));
+    @include motion-ok {
+      @nest :has(> &):not(:hover, :active) tool-tip {
+        --_y: 3px;
+      }
+    }
+    &::after {
+      --_tip: var(--_bottom-tip);
+      inset-block-end: calc(var(--_triangle-size) * -1);
+      border-block-end: var(--_triangle-size) solid transparent;
+    }
+  }
+  /* RIGHT || INLINE END */
+  &:is([tip-position="right"], [tip-position="inline-end"]) {
+    inset-inline-start: calc(100% + var(--_p-inline) + var(--_triangle-size));
+    inset-block-end: 50%;
+    --_y: 50%;
+    @include motion-ok {
+      @nest :has(> &):not(:hover, :active) tool-tip {
+        --_x: calc(var(--isRTL) * -3px * -1);
+      }
+    }
+    &::after {
+      --_tip: var(--_left-tip);
+      inset-inline-start: calc(var(--_triangle-size) * -1);
+      border-inline-start: var(--_triangle-size) solid transparent;
+    }
+    &:dir(rtl)::after {
+      --_tip: var(--_right-tip);
+    }
+  }
+  /* LEFT || INLINE START */
+  &:is([tip-position="left"], [tip-position="inline-start"]) {
+    inset-inline-end: calc(100% + var(--_p-inline) + var(--_triangle-size));
+    inset-block-end: 50%;
+    --_y: 50%;
+    @include motion-ok {
+      @nest :has(> &):not(:hover, :active) tool-tip {
+        --_x: calc(var(--isRTL) * 3px * -1);
+      }
+    }
+    &::after {
+      --_tip: var(--_right-tip);
+      inset-inline-end: calc(var(--_triangle-size) * -1);
+      border-inline-end: var(--_triangle-size) solid transparent;
+    }
+    &:dir(rtl)::after {
+      --_tip: var(--_left-tip);
+    }
+  }
+  /* BOTTOM || BLOCK END */
+  &:is([tip-position="bottom"], [tip-position="block-end"]) {
+    inset-inline-start: 50%;
+    inset-block-start: calc(100% + var(--_p-block) + var(--_triangle-size));
+    --_x: calc(50% * var(--isRTL));
+    @include motion-ok {
+      @nest :has(> &):not(:hover, :active) tool-tip {
+        --_y: -3px;
+      }
+    }
+    &::after {
+      --_tip: var(--_top-tip);
+      inset-block-start: calc(var(--_triangle-size) * -1);
+      border-block-start: var(--_triangle-size) solid transparent;
+    }
+  }
+}

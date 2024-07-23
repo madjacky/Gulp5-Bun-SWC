@@ -1,0 +1,17 @@
+@use 'vendors';
+@use 'base';
+@use 'pages';
+@use 'layout';
+@use 'utilities';
+@use 'components';
+
+@layer vendors,
+  reset.normalize,
+  reset,
+  design-system,
+  theme,
+  base,
+  pages,
+  layout,
+  utilities,
+  components;

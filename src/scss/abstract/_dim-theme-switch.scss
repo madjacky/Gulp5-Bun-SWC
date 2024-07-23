@@ -1,0 +1,15 @@
+@layer themes.dim-switch {
+  :where([data-theme="dim"]) {
+    color-scheme: dark;
+    --surface-1-color: var(--dim-surface-1-color);
+    --surface-2-color: var(--dim-surface-2-color);
+    --surface-3-color: var(--dim-surface-3-color);
+    --surface-4-color: var(--dim-surface-4-color);
+    --text-1-color: var(--dim-text-1-color);
+    --text-2-color: var(--dim-text-2-color);
+    --link-color: var(--dim-link-color);
+    --surface-shadow-color: 15.16% 0.039 250.31;
+    --surface-shadow-strength: .25;
+    --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007;
+  }
+}

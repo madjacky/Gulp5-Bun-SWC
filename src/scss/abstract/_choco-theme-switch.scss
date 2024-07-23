@@ -1,0 +1,15 @@
+@layer themes.choco-switch {
+  :where([data-theme="choco"]) {
+    color-scheme: dark;
+    --surface-1-color: var(--choco-surface-1-color);
+    --surface-2-color: var(--choco-surface-2-color);
+    --surface-3-color: var(--choco-surface-3-color);
+    --surface-4-color: var(--choco-surface-4-color);
+    --text-1-color: var(--choco-text-1-color);
+    --text-2-color: var(--choco-text-2-color);
+    --link-color: var(--choco-link-color);
+    --surface-shadow-color: 25deg 65% 11%;
+    --surface-shadow-strength: .25;
+    --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007;
+  }
+}

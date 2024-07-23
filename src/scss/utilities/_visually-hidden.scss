@@ -1,0 +1,13 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+  }
+}

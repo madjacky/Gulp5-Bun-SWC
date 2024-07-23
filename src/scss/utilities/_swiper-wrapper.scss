@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .swiper-wrapper {
+    box-sizing: inherit;
+  }
+}

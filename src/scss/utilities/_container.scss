@@ -1,0 +1,8 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .container {
+    margin-inline: auto;
+    padding-inline: var(--container-inline-offset);
+    max-inline-size: var(--container-inline-size);
+  }
+}

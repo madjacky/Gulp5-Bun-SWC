@@ -1,0 +1,16 @@
+@use '../abstract/' as *;
+@layer components {
+  .social {
+    @include flex-wrap-v-center;
+    gap: var(--size-5);
+    &__link {
+      @include in-flex-center;
+      block-size: var(--size-6);
+      aspect-ratio: var(--aspect-ratio-square);
+      svg {
+        block-size: 100%;
+        inline-size: 100%;
+      }
+    }
+  }
+}

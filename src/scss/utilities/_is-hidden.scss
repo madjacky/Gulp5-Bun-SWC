@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .is-hidden {
+    display: none !important;
+  }
+}

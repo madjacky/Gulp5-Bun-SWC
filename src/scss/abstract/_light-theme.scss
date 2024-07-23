@@ -1,0 +1,18 @@
+@layer themes.light {
+  :where(:root) {
+    color-scheme: light;
+    --surface-1-color: var(--light-surface-1-color);
+    --surface-2-color: var(--light-surface-2-color);
+    --surface-3-color: var(--light-surface-3-color);
+    --surface-4-color: var(--light-surface-4-color);
+    --surface-5-color: var(--light-surface-5-color);
+    --surface-6-color: var(--light-surface-6-color);
+    --text-1-color: var(--light-text-1-color);
+    --text-2-color: var(--light-text-2-color);
+    --text-3-color: var(--light-text-3-color);
+    --link-color: var(--light-link-color);
+    --link-visited-color: var(--light-link-visited-color);
+    --surface-shadow-color: .01;
+    --surface-shadow-strength: 15.18% 0.011 247.71;
+  }
+}

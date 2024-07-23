@@ -1,0 +1,24 @@
+@use 'display' as *;
+
+@mixin tabs {
+  &__list {
+    @include flex;
+    gap: var(--size-9);
+  }
+  &__button {
+    padding-block: 2ex;
+    padding-inline: 3ex;
+    background-color: oklch(var(--surface-1-color));
+    border: var(--border-size-1) solid transparent;
+    &:where([aria-selected="true"]) {
+      border-color: oklch(var(--link-color));
+    }
+    &:is(:focus-visible, :hover, :active) {
+      outline: none;
+      border-color: oklch(var(--link-color));
+    }
+  }
+  &__content {
+    @content;
+  }
+}

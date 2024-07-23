@@ -1,0 +1,15 @@
+@layer themes.obsidian-switch {
+  :where([data-theme="obsidian"]) {
+    color-scheme: dark;
+    --surface-1-color: var(--obsidian-surface-1-color);
+    --surface-2-color: var(--obsidian-surface-2-color);
+    --surface-3-color: var(--obsidian-surface-3-color);
+    --surface-4-color: var(--obsidian-surface-4-color);
+    --text-1-color: var(--obsidian-text-1-color);
+    --text-2-color: var(--obsidian-text-2-color);
+    --link-color: var(--obsidian-link-color);
+    --surface-shadow-color: 15.16% 0.039 250.31;
+    --surface-shadow-strength: .25;
+    --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007;
+  }
+}

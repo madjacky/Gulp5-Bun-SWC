@@ -1,0 +1,31 @@
+@use 'display' as *;
+
+@mixin radio-tab {
+  @include grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: oklch(var(--surface-4-color));
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  &:not(:has(:checked)):is(:focus-within, :hover) span {
+    color: oklch(var(--link-color));
+  }
+  &:has(:checked) {
+    background-color: oklch(var(--link-color));
+    color: oklch(var(--surface-1-color));
+  }
+  & > * {
+    grid-area: 1/1;
+  }
+  &__input {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  &__label {
+    padding-block: 2ex;
+    padding-inline: 3ex;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-300);
+  }
+}

@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .uppercase {
+    text-transform: uppercase;
+  }
+}

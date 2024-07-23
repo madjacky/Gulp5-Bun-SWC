@@ -1,0 +1,15 @@
+@layer themes.sage-switch {
+  :where([data-theme="sage"]) {
+    color-scheme: light;
+    --surface-1-color: var(--sage-surface-1-color);
+    --surface-2-color: var(--sage-surface-2-color);
+    --surface-3-color: var(--sage-surface-3-color);
+    --surface-4-color: var(--sage-surface-4-color);
+    --text-1-color: var(--sage-text-1-color);
+    --text-2-color: var(--sage-text-2-color);
+    --link-color: var(--sage-link-color);
+    --surface-shadow-color: 15.18% 0.011 247.71;
+    --surface-shadow-strength: .01;
+    --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001;
+  }
+}

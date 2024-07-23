@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .centered-horizontal {
+    text-align: center;
+  }
+}

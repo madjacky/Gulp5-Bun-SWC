@@ -1,0 +1,43 @@
+@mixin burger-button {
+  --_burger-color: 41.57% 0.016 244.56;
+  --_burger-hover-color: 26.62% 0.009 248.18;
+  --_burger-size: var(--size-9);
+  --_burger-border-size: var(--border-size-2);
+  --_burger-border-radius: var(--border-radius-2);
+  block-size: var(--_burger-size);
+  inline-size: var(--_burger-size);
+  border: var(--_burger-border-size) solid oklch(var(--_burger-color));
+  border-radius: var(--_burger-border-radius);
+  color: oklch(var(--_burger-color));
+  transition: border-color 300ms var(--ease-1), color 300ms var(--ease-1), fill 300ms var(--ease-1), stroke 300ms var(--ease-1);
+  &:is(:focus-visible, :hover, :active) {
+    color: oklch(var(--_burger-hover-color));
+    border-color: oklch(var(--_burger-hover-color));
+  }
+  [data-theme="dark"] & {
+    --_burger-color: 76.26% 0.013 244.31;
+    --_burger-hover-color: 92.27% 0.006 239.82;
+  }
+  &__line {
+    transform-origin: center;
+    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  }
+  &:is([aria-expanded="true"]) {
+    .burger__line {
+      transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+    }
+    .burger__line--top,
+    .burger__line--bottom {
+      y: 45;
+    }
+    .burger__line--top {
+      rotate: 45deg;
+    }
+    .burger__line--middle {
+      opacity: 0;
+    }
+    .burger__line--bottom {
+      rotate: -45deg;
+    }
+  }
+}

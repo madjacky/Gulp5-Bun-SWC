@@ -1,0 +1,15 @@
+@use '../abstract/' as *;
+@layer components {
+  .tabs {
+    gap: 5vmax;
+    & {
+      @include tabs;
+    }
+    & {
+      @include grid;
+    }
+    &__content {
+      @include grid-center;
+    }
+  }
+}

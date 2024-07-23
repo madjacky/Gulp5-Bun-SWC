@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .page--ios .disable-scroll {
+    position: relative;
+  }
+}
