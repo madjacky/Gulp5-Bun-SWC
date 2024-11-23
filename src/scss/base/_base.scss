@@ -10,6 +10,7 @@
 		scrollbar-color: oklch(var(--scroll-thumb-color));
     &__body {
       @include grid;
+      place-content: center;
       background-image:
 				radial-gradient(circle at center, oklch(var(--text-color-2) / 0), oklch(var(--document-surface-color))),
 				radial-gradient(circle at 1px 1px, oklch(var(--text-color-2) / .47) 1px, oklch(var(--text-color-2) / 0) 0);
@@ -20,5 +21,8 @@
 			font-size: var(--font-size-2);
 			line-height: var(--font-line-height-7);
     }
+  }
+  .main {
+    inline-size: 100svb;// Remove this style
   }
 }
