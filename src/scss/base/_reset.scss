@@ -7,10 +7,10 @@
   }
   :where(:root) {
 		--transition-focus: outline-offset 145ms var(--ease-2);
+    interpolate-size: allow-keywords;
 		@supports (transition-timing-function: linear(0, 1)) {
 			--transition-focus: outline-offset 145ms var(--ease-spring-3);
 		}
-		interpolate-size: allow-keywords;
 	}
   :where(:not(dialog)) {
     margin: 0;
