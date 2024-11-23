@@ -1,4 +1,5 @@
-@layer themes.mate-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="matte"], .matte, .matte-theme) {
     color-scheme: dark;
     --link-color: 57.44% 0.122 238.11;

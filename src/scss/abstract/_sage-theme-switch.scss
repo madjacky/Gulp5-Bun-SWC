@@ -1,4 +1,5 @@
-@layer themes.sage-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="sage"], .sage, .sage-theme) {
     color-scheme: light;
     --link-color: 70.72% 0.1679488624357663 242.04198289887938;

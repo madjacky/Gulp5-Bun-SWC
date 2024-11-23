@@ -1,4 +1,5 @@
-@layer themes.dark {
+@use 'colors';
+@layer themes {
   @media (prefers-color-scheme: dark) {
     :where(:root) {
       color-scheme: dark;

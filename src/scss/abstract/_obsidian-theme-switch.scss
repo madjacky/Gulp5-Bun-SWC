@@ -1,5 +1,6 @@
-@layer themes.obsidian-switch {
-  :where([data-theme="Obsidian"], .Obsidian, .Obsidian-theme) {
+@use 'colors';
+@layer themes {
+  :where([data-theme="obsidian"], .obsidian, .obsidian-theme) {
     color-scheme: dark;
     --link-color: 47.53% 0.075 234.04;
     --link-visited-color: initial;

@@ -1,4 +1,5 @@
-@layer themes.dim-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="dim"], .dim, .dim-theme) {
     color-scheme: dark;
     --link-color: var(--orange-4);

@@ -1,4 +1,5 @@
-@layer themes.light-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="light"], .light, .light-theme) {
     color-scheme: light;
     --link-color: var(--indigo-7);

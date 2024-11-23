@@ -1,4 +1,5 @@
-@layer themes.grape-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="grape"], .grape, .grape-theme) {
     color-scheme: light;
     --link-color: var(--purple-5);

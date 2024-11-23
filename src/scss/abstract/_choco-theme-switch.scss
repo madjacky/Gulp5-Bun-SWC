@@ -1,4 +1,5 @@
-@layer themes.choco-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="choco"], .choco, .choco-theme) {
     color-scheme: dark;
     --link-color: var(--choco-5);

@@ -1,4 +1,5 @@
-@layer themes.dark-switch {
+@use 'colors';
+@layer themes {
   :where([data-theme="dark"], .dark, .dark-theme) {
     color-scheme: dark;
     --link-color: var(--indigo-3);

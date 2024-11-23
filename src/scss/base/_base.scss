@@ -24,5 +24,8 @@
   }
   .main {
     inline-size: 100svb;// Remove this style
+    img {
+      inline-size: 100%;
+    }
   }
 }
