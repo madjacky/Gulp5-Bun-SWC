@@ -3,16 +3,22 @@
 
 @layer base {
   .page {
-    background-color: oklch(var(--surface-2-color));
-    color: oklch(var(--text-1-color));
-    accent-color: oklch(var(--link-color));
+    background-color: oklch(var(--document-surface-color));
+		color: oklch(var(--text-color-1));
+		accent-color: oklch(var(--link-color));
+		caret-color: oklch(var(--link-color));
+		scrollbar-color: oklch(var(--scroll-thumb-color));
     &__body {
       @include grid;
-      place-content: center;
+      background-image:
+				radial-gradient(circle at center, oklch(var(--text-color-2) / 0), oklch(var(--document-surface-color))),
+				radial-gradient(circle at 1px 1px, oklch(var(--text-color-2) / .47) 1px, oklch(var(--text-color-2) / 0) 0);
+      background-size: 200px 200px, 40px 40px;
+      background-repeat: repeat;
       font-family: var(--font-sans);
-      font-weight: var(--font-weight-400);
-      font-size: var(--font-size-200);
-      line-height: var(--font-lineheight-5);
+			font-weight: var(--font-weight-400);
+			font-size: var(--font-size-2);
+			line-height: var(--font-line-height-7);
     }
   }
 }

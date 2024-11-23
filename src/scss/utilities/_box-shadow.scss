@@ -1,16 +1,16 @@
 @use '../abstract/' as *;
 @layer utilities {
-  .box-shadow-1 { box-shadow: var(--surface-shadow-1); }
-  .box-shadow-2 { box-shadow: var(--surface-shadow-2); }
-  .box-shadow-3 { box-shadow: var(--surface-shadow-3); }
-  .box-shadow-4 { box-shadow: var(--surface-shadow-4); }
-  .box-shadow-5 { box-shadow: var(--surface-shadow-5); }
-  .box-shadow-6 { box-shadow: var(--surface-shadow-6); }
+  .box-shadow-1 { box-shadow: var(--shadow-1); }
+  .box-shadow-2 { box-shadow: var(--shadow-2); }
+  .box-shadow-3 { box-shadow: var(--shadow-3); }
+  .box-shadow-4 { box-shadow: var(--shadow-4); }
+  .box-shadow-5 { box-shadow: var(--shadow-5); }
+  .box-shadow-6 { box-shadow: var(--shadow-6); }
 
-  .box-inner-shadow-1 { box-shadow: var(--surface-inner-shadow-1); }
-  .box-inner-shadow-2 { box-shadow: var(--surface-inner-shadow-2); }
-  .box-inner-shadow-3 { box-shadow: var(--surface-inner-shadow-3); }
-  .box-inner-shadow-4 { box-shadow: var(--surface-inner-shadow-4); }
-  .box-inner-shadow-5 { box-shadow: var(--surface-inner-shadow-5); }
+  .box-inner-shadow-1 { box-shadow: var(--inner-shadow-1); }
+  .box-inner-shadow-2 { box-shadow: var(--inner-shadow-2); }
+  .box-inner-shadow-3 { box-shadow: var(--inner-shadow-3); }
+  .box-inner-shadow-4 { box-shadow: var(--inner-shadow-4); }
+  .box-inner-shadow-5 { box-shadow: var(--inner-shadow-5); }
 
 }

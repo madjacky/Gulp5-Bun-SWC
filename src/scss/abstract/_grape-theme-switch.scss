@@ -1,15 +1,18 @@
 @layer themes.grape-switch {
-  :where([data-theme="grape"]) {
+  :where([data-theme="grape"], .grape, .grape-theme) {
     color-scheme: light;
-    --surface-1-color: var(--grape-surface-1-color);
-    --surface-2-color: var(--grape-surface-2-color);
-    --surface-3-color: var(--grape-surface-3-color);
-    --surface-4-color: var(--grape-surface-4-color);
-    --text-1-color: var(--grape-text-1-color);
-    --text-2-color: var(--grape-text-2-color);
-    --link-color: var(--grape-link-color);
-    --surface-shadow-color: var(--purple-12-oklch);
-    --surface-shadow-strength: .01;
-    --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001;
+    --link-color: var(--purple-5);
+    --link-visited-color: var(--indigo-5);
+    --brand-primary-color: initial;
+    --brand-secondary-color: initial;
+    --surface-color-0: var(--black-color);
+    --surface-color-1: var(--purple-0);
+    --surface-color-2: var(--purple-1);
+    --surface-color-3: var(--purple-2);
+    --surface-color-4: var(--purple-3);
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: var(--purple-9);
+    --text-color-2: var(--purple-7);
+    --scroll-thumb-color: var(--surface-4-color);
   }
 }

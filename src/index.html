@@ -4,12 +4,12 @@
 <body class="page__body">
   @include('layout/header.html')
   <main class="main">
-    <picture>
-      <source srcset="assets/images/cover-dark.avif" media="(prefers-color-scheme: dark) type="image/avif">
+    <picture class="main-logo">
+      <source srcset="assets/images/cover-dark.avif" media="(prefers-color-scheme: dark)" type="image/avif">
       <source srcset="assets/images/cover-light.avif" type="image/avif">
-      <source srcset="assets/images/cover-dark.webp" media="(prefers-color-scheme: dark) type="image/webp">
+      <source srcset="assets/images/cover-dark.webp" media="(prefers-color-scheme: dark)" type="image/webp">
       <source srcset="assets/images/cover-light.webp" type="image/webp">
-      <img loading="lazy" src="assets/images/cover-light.jpeg" class="image" width="916" height="650" alt="">
+      <img loading="lazy" src="assets/images/cover-light.jpeg" class="image" width="916" height="650" alt="Gulp Logo by Author">
     </picture>
   </main>
   @include('layout/footer.html')

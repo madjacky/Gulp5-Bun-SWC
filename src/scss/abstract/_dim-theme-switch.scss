@@ -1,15 +1,18 @@
 @layer themes.dim-switch {
-  :where([data-theme="dim"]) {
+  :where([data-theme="dim"], .dim, .dim-theme) {
     color-scheme: dark;
-    --surface-1-color: var(--dim-surface-1-color);
-    --surface-2-color: var(--dim-surface-2-color);
-    --surface-3-color: var(--dim-surface-3-color);
-    --surface-4-color: var(--dim-surface-4-color);
-    --text-1-color: var(--dim-text-1-color);
-    --text-2-color: var(--dim-text-2-color);
-    --link-color: var(--dim-link-color);
-    --surface-shadow-color: 15.16% 0.039 250.31;
-    --surface-shadow-strength: .25;
-    --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007;
+    --link-color: var(--orange-4);
+    --link-visited-color: initial;
+    --brand-primary-color: initial;
+    --brand-secondary-color: initial;
+    --surface-color-0: var(--black-color);
+    --surface-color-1: var(--gray-8);
+    --surface-color-2: var(--gray-7);
+    --surface-color-3: var(--gray-6);
+    --surface-color-4: var(--gray-5);
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: var(--gray-3);
+    --text-color-2: var(--gray-4);
+    --scroll-thumb-color: var(--surface-4-color);
   }
 }

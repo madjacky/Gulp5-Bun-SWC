@@ -2,22 +2,19 @@
   @media (prefers-color-scheme: dark) {
     :where(:root) {
       color-scheme: dark;
-      --surface-1-color: var(--dark-surface-1-color);
-      --surface-2-color: var(--dark-surface-2-color);
-      --surface-3-color: var(--dark-surface-3-color);
-      --surface-4-color: var(--dark-surface-4-color);
-      --surface-5-color: var(--dark-surface-5-color);
-      --surface-6-color: var(--dark-surface-6-color);
-      --surface-7-color: var(--dark-surface-7-color);
-      --surface-8-color: var(--dark-surface-8-color);
-      --text-1-color: var(--dark-text-1-color);
-      --text-2-color: var(--dark-text-2-color);
-      --text-3-color: var(--dark-text-3-color);
-      --text-4-color: var(--dark-text-4-color);
-      --link-color: var(--dark-link-color);
-      --link-visited-color: var(--dark-link-visited-color);
-      --surface-shadow-color: 15.16% 0.039 250.31;
-      --surface-shadow-strength: .25;
+      --link-color: var(--indigo-3);
+      --link-visited-color: var(--purple-3);
+      --brand-primary-color: initial;
+      --brand-secondary-color: initial;
+      --surface-color-0: var(--black-color);
+      --surface-color-1: var(--gray-9);
+      --surface-color-2: var(--gray-8);
+      --surface-color-3: var(--gray-7);
+      --surface-color-4: var(--gray-6);
+      --document-surface-color: var(--surface-color-2);
+      --text-color-1: var(--gray-0);
+      --text-color-2: var(--gray-4);
+      --scroll-thumb-color: var(--surface-4-color);
     }
   }
 }

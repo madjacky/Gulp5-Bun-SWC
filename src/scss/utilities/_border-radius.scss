@@ -1,2 +1,7 @@
 @use '../abstract/' as *;
-@layer utilities {}
+@layer utilities {
+  .border-start-start-radius { border-start-start-radius: initial; } /* border-top-left-radius */
+	.border-start-end-radius { border-start-end-radius: initial; } /* border-top-right-radius */
+	.border-end-end-radius { border-end-end-radius: initial; } /* border-bottom-right-radius */
+	.border-end-start-radius { border-end-start-radius: initial; } /* border-bottom-left-radiu */
+}

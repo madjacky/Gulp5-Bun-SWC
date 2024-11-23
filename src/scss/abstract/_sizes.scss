@@ -2,63 +2,91 @@
   :where(:root) {
     /*  CONTENT SIZES
     ================================ */
-    --size-content-1: 20ch;
-    --size-content-2: 45ch;
-    --size-content-3: 60ch;
-    --size-content-4: 65ch;
+    --content-size-1: 20ch;
+		--content-size-2: 45ch;
+		--content-size-3: 60ch;
+		--content-size-4: 80ch;
+		--content-size-5: 90ch;
+		--content-size-6: 100ch;
+		--content-size-7: 111.31ch; // 960px
+		--content-size-8: 118.73ch; // 1024px
+		--content-size-9: 129.16ch; // 1140px
+		--content-size-10: 142.61ch; // 1230px
+		--content-size-11: 155.37ch; // 1440px
 
     /*  FLUID SIZES
     ============================================== */
-    --size-fluid-1: clamp(0.5rem, 1vw, 1rem);
-    --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
-    --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
-    --size-fluid-4: clamp(2rem, 4vw, 3rem);
-    --size-fluid-5: clamp(4rem, 5vw, 5rem);
-    --size-fluid-6: clamp(5rem, 7vw, 7.5rem);
-    --size-fluid-7: clamp(7.5rem, 10vw, 10rem);
-    --size-fluid-8: clamp(10rem, 20vw, 15rem);
-    --size-fluid-9: clamp(15rem, 30vw, 20rem);
-    --size-fluid-10: clamp(20rem, 40vw, 30rem);
+    --fluid-size-1: clamp(0.5rem, 1svi, 1rem);
+		--fluid-size-2: clamp(1rem, 2svi, 1.5rem);
+		--fluid-size-3: clamp(1.5rem, 3svi, 2rem);
+		--fluid-size-4: clamp(2rem, 4svi, 3rem);
+		--fluid-size-5: clamp(4rem, 5svi, 5rem);
+		--fluid-size-6: clamp(5rem, 7svi, 7.5rem);
+		--fluid-size-7: clamp(7.5rem, 10svi, 10rem);
+		--fluid-size-8: clamp(10rem, 20svi, 15rem);
+		--fluid-size-9: clamp(15rem, 30svi, 20rem);
+		--fluid-size-10: clamp(20rem, 40svi, 30rem);
 
     /*  RELATIVE SIZES
     ============================================== */
-    --size-relative-000: -0.5ch;
-    --size-relative-00: -0.25ch;
-    --size-relative-1: 0.25ch;
-    --size-relative-2: 0.5ch;
-    --size-relative-3: 1ch;
-    --size-relative-4: 1.25ch;
-    --size-relative-5: 1.5ch;
-    --size-relative-6: 1.75ch;
-    --size-relative-7: 2ch;
-    --size-relative-8: 3ch;
-    --size-relative-9: 4ch;
-    --size-relative-10: 5ch;
-    --size-relative-11: 7.5ch;
-    --size-relative-12: 10ch;
-    --size-relative-13: 15ch;
-    --size-relative-14: 20ch;
-    --size-relative-15: 30ch;
+    --relative-size-1: -0.5ch;
+		--relative-size-2: -0.25ch;
+		--relative-size-3: .25ch;
+		--relative-size-4: .5ch;
+		--relative-size-5: 1ch;
+		--relative-size-6: 1.25ch;
+		--relative-size-7: 1.5ch;
+		--relative-size-8: 1.75ch;
+		--relative-size-9: 2ch;
+		--relative-size-10: 3ch;
+		--relative-size-11: 4ch;
+		--relative-size-12: 5ch;
+		--relative-size-13: 7.5ch;
+		--relative-size-14: 10ch;
+		--relative-size-15: 15ch;
+		--relative-size-16: 20ch;
+		--relative-size-17: 30ch;
 
     /*  SIZES
     ============================================== */
     --size-1: -0.5rem;
-    --size-2: -0.25rem;
-    --size-3: 0.25rem;
-    --size-4: 0.5rem;
-    --size-5: 1rem;
-    --size-6: 1.25rem;
-    --size-7: 1.5rem;
-    --size-8: 1.75rem;
-    --size-9: 2rem;
-    --size-10: 3rem;
-    --size-11: 4rem;
-    --size-12: 5rem;
-    --size-13: 7.5rem;
-    --size-14: 10rem;
-    --size-15: 15rem;
-    --size-16: 20rem;
-    --size-17: 30rem;
-    --size-18: 76.875rem;
+		--size-2: -0.25rem;
+		--size-3: .25rem;
+		--size-4: .5rem;
+		--size-5: .75rem;
+		--size-6: .875rem;
+		--size-7: 1rem;
+		--size-8: 1.125rem;
+		--size-9: 1.25rem;
+		--size-10: 1.5rem;
+		--size-11: 1.75rem;
+		--size-12: 1.875rem;
+		--size-13: 2rem;
+		--size-14: 2.5rem;
+		--size-15: 3rem;
+		--size-16: 3.5rem;
+		--size-17: 4rem;
+		--size-18: 5rem;
+		--size-19: 7.5rem;
+		--size-20: 10rem;
+		--size-21: 15rem;
+		--size-22: 20rem;
+		--size-23: 30rem;
+
+    /*  SCREEN SIZES
+    ============================================== */
+    --size-xxs: 15em;
+		--size-xs: 22.5em;
+		--size-sm: 30em;
+		--size-md: 48em;
+		--size-lg: 64em;
+		--size-xl: 90em;
+		--size-xxl: 120em;
+
+    /*  HEADER BLOCK SIZES
+    ============================================== */
+    --header-size-1: 20ch;
+		--header-size-2: 25ch;
+		--header-size-3: 35ch;
   }
 }

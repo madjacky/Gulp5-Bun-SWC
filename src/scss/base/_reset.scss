@@ -5,17 +5,37 @@
   ::after {
     box-sizing: border-box;
   }
-  * {
+  :where(:root) {
+		--transition-focus: outline-offset 145ms var(--ease-2);
+		@supports (transition-timing-function: linear(0, 1)) {
+			--transition-focus: outline-offset 145ms var(--ease-spring-3);
+		}
+		interpolate-size: allow-keywords;
+	}
+  :where(:not(dialog)) {
     margin: 0;
     padding: 0;
-    font: inherit;
   }
-  :where(:root) {
-    --transition-focus: outline-offset 145ms var(--ease-2);
-    @supports (transition-timing-function: linear(0, 1)) {
-      --transition-focus: outline-offset 145ms var(--ease-spring-3);
+  :where(:not(fieldset, progress, meter)) {
+		border-width: 0;
+		border-style: solid;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+	}
+  @include motion-ok {
+    :where(:focus-visible) {
+      transition: var(--transition-focus);
+    }
+    :where(:not(:active):focus-visible) {
+      transition-duration: .25s;
     }
   }
+  :where(:not(:active):focus-visible) {
+    outline-offset: 5px;
+  }
+  :focus-visible {
+		outline-color: oklch(var(--link-color));
+	}
   :where(html) {
     --isLTR: 1;
 		--isRTL: -1;
@@ -45,17 +65,6 @@
       }
     }
   }
-  @include motion-ok {
-    :where(:focus-visible) {
-      transition: var(--transition-focus);
-    }
-    :where(:not(:active):focus-visible) {
-      transition-duration: .25s;
-    }
-  }
-  :where(:not(:active):focus-visible) {
-    outline-offset: 5px;
-  }
   :where(body) {
     min-block-size: 100vh;
     min-block-size: 100dvb;
@@ -63,16 +72,25 @@
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
   }
+  :where(
+		header,
+		main,
+		section,
+		article,
+		footer) {
+			container-type: inline-size;
+	}
+  :where(ul, ol, menu)[role='list'] {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
   :where(h1, h2, h3, h4, h5, h6) {
-    line-height: 1.1;
-    font-weight: var(--font-weight-900);
+    line-height: var(--font-line-height-3);
+    font-weight: var(--font-weight-700);
     text-wrap: balance;
   }
-  :where(li) {
-    max-inline-size: var(--size-content-2);
-  }
-  :where(p) {
-    max-inline-size: var(--size-content-4);
+  :where(p, li) {
     text-wrap: pretty;
   }
   :where(
@@ -109,6 +127,12 @@
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
+  :where(input, button, textarea, select) {
+		font: inherit;
+		font-size: inherit;
+		letter-spacing: inherit;
+		word-spacing: inherit;
+	}
   :where(a) {
     &:where([href]) {
       color: inherit;
@@ -142,9 +166,6 @@
   :where(svg) {
     fill: currentColor;
   }
-  :focus-visible {
-    outline-color: oklch(var(--link-color));
-  }
   :has(> tool-tip) {
     position: relative;
     &:is(:hover, :focus-visible, :active) > tool-tip {
@@ -152,4 +173,8 @@
       transition-delay: 200ms !important;
     }
   }
+  ::placeholder {
+		color: oklch(var(--text-color-2) / .75);
+		opacity: 0.75;
+	}
 }

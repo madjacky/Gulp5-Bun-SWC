@@ -2,7 +2,7 @@
 @layer utilities {
   .flow {
     & > *:where(:not(:first-child)) {
-      margin-block-start: var(--size-5);
+      margin-block-start: var(--size-7);
     }
   }
 }
