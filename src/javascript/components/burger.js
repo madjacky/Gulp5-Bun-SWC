@@ -1,2 +1,2 @@
-import { toggleBurgerMenu } from '../functions/burger-button.js';
-toggleBurgerMenu();
+// import { toggleBurgerMenu } from '../functions/burger-button.js';
+// toggleBurgerMenu();

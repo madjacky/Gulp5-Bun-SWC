@@ -1,2 +1,2 @@
-import { themeToggle } from '../functions/theme-toggle.js';
-themeToggle();
+import { initializeTheme } from '../functions/theme-toggle.js';
+initializeTheme()

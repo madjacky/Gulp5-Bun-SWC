@@ -24,8 +24,11 @@
   }
   .main {
     inline-size: 100svb;// Remove this style
-    img {
-      inline-size: 100%;
-    }
+  }
+  .taskRunner-cover > img {
+    overflow: clip;
+    inline-size: 100%;
+    border-radius: var(--border-conditional-radius-7);
+    box-shadow: var(--shadow-6);
   }
 }

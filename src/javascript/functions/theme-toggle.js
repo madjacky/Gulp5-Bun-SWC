@@ -1,51 +1,88 @@
-export const themeToggle = () => {
-  const storageKey = 'theme-preference';
-  const onClick = () => {
-    theme.value = theme.value === 'light' ? 'dark' : 'light';
-    setPreference();
-  };
-  const getColorPreference = () => localStorage.getItem(storageKey) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  const setPreference = () => {
-    localStorage.setItem(storageKey, theme.value);
-    reflectPreference();
-  };
-  const reflectPreference = () => {
-    document.documentElement.setAttribute('data-theme', theme.value);
-    document.getElementById('theme-toggle').setAttribute('aria-label', theme.value);
-    const picture = document.querySelector('picture');
-    const sources = picture.querySelectorAll('source:not([media="(prefers-color-scheme: dark)"])');
-    const image = picture.querySelector('img');
-    const imageSources = {
-      dark: {
-        avif: 'assets/images/cover-dark.avif',
-        webp: 'assets/images/cover-dark.webp',
-        jpg: 'assets/images/cover-dark.jpg',
-        jpeg: 'assets/images/cover-dark.jpeg',
-      },
-      light: {
-        avif: 'assets/images/cover-light.avif',
-        webp: 'assets/images/cover-light.webp',
-        jpg: 'assets/images/cover-light.jpg',
-        jpeg: 'assets/images/cover-light.jpeg',
-      },
-    };
+const storageKey = 'theme-preference'
+
+const getColorPreference = () => {
+    if (localStorage.getItem(storageKey))
+        return localStorage.getItem(storageKey)
+    else
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+}
+
+const updateImages = (theme) => {
+    const logoPicture = document.querySelector('picture.taskRunner-cover')
+
+    if (!logoPicture) {
+        return
+    }
+
+    const sources = logoPicture.querySelectorAll('source')
+    const isDark = theme.value === 'dark'
+
     sources.forEach(source => {
-      const format = source.type.split('/')[1];
-      source.srcset = imageSources[theme.value][format];
-    });
-    image.src = imageSources[theme.value].jpg;
-  };
+        const srcset = source.getAttribute('srcset')
+        const isSourceDark = srcset.includes('-dark.')
+
+        if (isSourceDark) {
+            source.setAttribute('media', isDark ? '' : '(prefers-color-scheme: dark)')
+        } else {
+            source.setAttribute('media', isDark ? '(prefers-color-scheme: light)' : '')
+        }
+
+        if (source.getAttribute('media') === '') {
+            source.removeAttribute('media')
+        }
+    })
+
+    const img = logoPicture.querySelector('img')
+    if (img) {
+        let currentSrc = img.getAttribute('src')
+        let basePath = currentSrc.replace(/-light\.||-dark\./, '-')
+        let extension = currentSrc.split('.').pop()
+
+        img.setAttribute('src', `${basePath}${isDark ? 'dark' : 'light'}.${extension}`)
+    }
+}
+
+const reflectPreference = (theme) => {
+    document.firstElementChild
+        .setAttribute('data-theme', theme.value)
+
+    document
+        .querySelector('#theme-toggle')
+        ?.setAttribute('aria-label', theme.value)
+
+    updateImages(theme)
+}
+
+const setPreference = (theme) => {
+  localStorage.setItem(storageKey, theme.value)
+  reflectPreference(theme)
+}
+
+export const initializeTheme = () => {
   const theme = {
-    value: getColorPreference(),
-  };
-  reflectPreference();
+      value: getColorPreference(),
+  }
+
+  reflectPreference(theme)
+
+  const onClick = () => {
+      theme.value = theme.value === 'light' ? 'dark' : 'light'
+      setPreference(theme)
+  }
+
   window.onload = () => {
-    reflectPreference();
-    document.getElementById('theme-toggle').addEventListener('click', onClick);
-  };
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    theme.value = e.matches ? 'dark' : 'light';
-    setPreference();
-  });
-  console.log('Theeme Toggler!');
-};
+      reflectPreference(theme)
+
+      document
+          .querySelector('#theme-toggle')
+          ?.addEventListener('click', onClick)
+  }
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', ({matches:isDark}) => {
+        theme.value = isDark ? 'dark' : 'light'
+        setPreference(theme)
+    })
+}

@@ -13,14 +13,14 @@
     "scope": "html",
     "prefix": "g-theme-toggle",
     "body": [
-      "<button id=\"theme-toggle\" class=\"btn-reset icon-button theme-toggle\" type=\"button\" title=\"Toggles light & dark\" aria-label=\"auto\" aria-live=\"polite\">",
-      "  <svg class=\"sun-and-moon\" aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">",
-      "     <mask class=\"moon\" id=\"moon-mask\">",
+      "<button id=\"theme-toggle\" class=\"button-reset theme-toggle\" type=\"button\" title=\"Toggles light & dark\" aria-label=\"auto\" aria-live=\"polite\">",
+      "  <svg class=\"theme-toggle__mode\" aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">",
+      "     <mask class=\"theme-toggle__mode-moon\" id=\"moon-mask\">",
       "       <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\" />",
       "       <circle cx=\"24\" cy=\"10\" r=\"6\" fill=\"black\" />",
       "     </mask>",
-      "     <circle class=\"sun\" cx=\"12\" cy=\"12\" r=\"6\" mask=\"url(#moon-mask)\" fill=\"currentColor\" />",
-      "     <g class=\"sun-beams\" stroke=\"currentColor\">",
+      "     <circle class=\"theme-toggle__mode-sun\" cx=\"12\" cy=\"12\" r=\"6\" mask=\"url(#moon-mask)\" fill=\"currentColor\" />",
+      "     <g class=\"theme-toggle__mode-sun-beams\" stroke=\"currentColor\">",
         "     <line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\" />",
         "     <line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" />",
         "     <line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\" />",
@@ -98,7 +98,7 @@
     "prefix": "g-nav",
     "body": [
       "<nav class=\"nav\" title=\"$1\">",
-      "  <ul class=\"list-reset nav__list\">",
+      "  <ul role=\"list\" class=\"nav__list\">",
       "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
       "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
       "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
@@ -165,7 +165,7 @@
   "picture": {
     "prefix": "g-picture",
     "body": [
-      "<picture>",
+      "<picture class=\"\">",
       "  <source srcset=\"$1.avif\" type=\"image/avif\">",
       "  <source srcset=\"$1.webp\" type=\"image/webp\">",
       "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
