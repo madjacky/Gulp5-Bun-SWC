@@ -17,13 +17,13 @@
     "zip": "gulp zip --build"
   },
   "devDependencies": {
-    "@swc/core": "^1.9.3",
-    "@types/bun": "^1.1.14",
+    "@swc/core": "^1.11.5",
+    "@types/bun": "^1.2.4",
     "autoprefixer": "^10.4.20",
     "browser-sync": "^3.0.3",
     "cssnano": "^7.0.6",
     "del": "^8.0.0",
-    "editorconfig-checker": "^6.0.0",
+    "editorconfig-checker": "^6.0.1",
     "gulp": "^5.0.0",
     "gulp-avif": "^1.1.1",
     "gulp-cheerio": "^1.0.0",
@@ -44,15 +44,15 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-webp": "^5.0.0",
-    "gulp-zip": "^6.0.0",
-    "postcss": "^8.4.49",
+    "gulp-zip": "^6.1.0",
+    "postcss": "^8.5.3",
     "postcss-import": "^16.1.0",
-    "sass": "^1.81.0",
-    "stylelint": "^16.10.0",
+    "sass": "^1.85.1",
+    "stylelint": "^16.15.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
     "swc-loader": "^0.2.6",
-    "webpack": "^5.96.1",
+    "webpack": "^5.98.0",
     "webpack-stream": "^7.0.0"
   },
   "peerDependencies": {
@@ -60,5 +60,9 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@swc/core"
+  ]
 }
